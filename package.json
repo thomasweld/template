@@ -1,0 +1,21 @@
+{
+  "name": "tiy-march-2016-template",
+  "version": "1.0.0",
+  "description": "This is a basic starter template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "surge -p \"$(npm prefix)/app\" -d \"tiy-$(whoami)-${PWD##*/}.surge.sh\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiy-atl-js-march-2016/template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiy-atl-js-march-2016/template/issues"
+  },
+  "homepage": "https://github.com/tiy-atl-js-march-2016/template#readme"
+}
