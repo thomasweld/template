@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "surge -p \"$(npm prefix)/app\" -d \"tiy-$(whoami | tr '[:upper:]' '[:lower:]')-${PWD##*/}.surge.sh\"",
-    "sass": "node-sass -w src/sass/main.scss app/css/bundle.css"
+    "deploy": "surge -p \"$(npm prefix)/app\" -d \"tiy-$(whoami | tr '[:upper:]' '[:lower:]')-${PWD##*/}.surge.sh\""
   },
   "repository": {
     "type": "git",
