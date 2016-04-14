@@ -24,7 +24,7 @@ gulp.task('sass', () => {
 
 // Converts ES2015+ to ES5 & Supports Modules
 gulp.task('browserify', () => {
-  return browserify('./src/js/index.js', {debug: true})
+  return browserify('./src/js/main.js', {debug: true})
     .transform(babel)
     .bundle()
     .pipe(source('./bundle.js'))
