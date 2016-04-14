@@ -15,7 +15,7 @@ const gulp        = require('gulp'),
 
 // Converts SASS into CSS
 gulp.task('sass', () => {
-  gulp.src('./src/scss/main.scss')
+  gulp.src('./src/sass/main.scss')
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(sass())
     .pipe(sourcemaps.write('./'))
@@ -36,7 +36,7 @@ gulp.task('browserify', () => {
 
 // Watches our .scss & .js files for change
 gulp.task('watch', () => {
-  watch('./src/scss/**/*.scss', () => { gulp.start('sass'); });
+  watch('./src/sass/**/*.scss', () => { gulp.start('sass'); });
   watch(['./src/js/**/*.js', './package.json'], () => { gulp.start('browserify'); });
   watch('./app/**/**', () => { browserSync.reload(); });
 });
@@ -46,7 +46,7 @@ gulp.task('server', function(done) {
   browserSync.init({
     server: "./app",
     port: 8080,
-    open: false,
+    // open: false,
     notify: false
   });
 });
