@@ -17,5 +17,17 @@
   "bugs": {
     "url": "https://github.com/tiy-atl-js-march-2016/template/issues"
   },
-  "homepage": "https://github.com/tiy-atl-js-march-2016/template#readme"
+  "homepage": "https://github.com/tiy-atl-js-march-2016/template#readme",
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "browser-sync": "2.11.2",
+    "browserify": "^11.2.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }
