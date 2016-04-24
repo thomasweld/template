@@ -10,6 +10,7 @@ const gulp        = require('gulp'),
       babel       = require('babelify'),
       chalk       = require('chalk'),
       sass        = require('gulp-sass'),
+      sassImport  = require('sass-module-importer'),
       plumber     = require('gulp-plumber'),
       watch       = require('gulp-watch'),
       browserSync = require('browser-sync').create();
@@ -17,7 +18,7 @@ const gulp        = require('gulp'),
 // Function to handle errors.
 // Prevents Gulp from stopping.
 var handleError = function(err) {
-  notify.onError("Oops: We found an error!")(err);
+  notify.onError("Doh! Check iTerm for details!")(err);
   console.log(chalk.white.bgRed(' <error> ------------------------ '));
   console.log(chalk.white(err.message));
   console.log(chalk.white.bgRed(' </error> ----------------------- '));
@@ -28,7 +29,7 @@ var handleError = function(err) {
 gulp.task('sass', () => {
   gulp.src('./src/sass/main.scss')
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sass().on('error', handleError))
+    .pipe(sass({ importer: sassImport() }).on('error', handleError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./app/css'));
 });
